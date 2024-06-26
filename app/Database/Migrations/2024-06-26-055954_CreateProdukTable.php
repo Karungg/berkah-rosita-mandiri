@@ -29,6 +29,10 @@ class CreateProdukTable extends Migration
             'stok' => [
                 'type' => 'INT'
             ],
+            'gambar' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ],
             'created_at' => [
                 'type' => 'datetime',
                 'null' => true
