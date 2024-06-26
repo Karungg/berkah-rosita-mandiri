@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/appLayout'); ?>
+<?= $this->extend('layouts/homeLayout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px">
