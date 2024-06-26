@@ -1,5 +1,13 @@
 <?= $this->extend('layouts/appLayout'); ?>
 
+<?= $this->section('title'); ?>
+Dashboard
+<?= $this->endSection(); ?>
+
+<?= $this->section('breadcumb'); ?>
+Dashboard
+<?= $this->endSection(); ?>
+
 <?= $this->section('content'); ?>
 <div class="col-lg-6">
     <div class="card mb-4">
