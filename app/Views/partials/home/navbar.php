@@ -3,7 +3,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
             <a href="index.html" class="navbar-brand">
-                <h2 class="text-white">Hairnic</h2>
+                <img src="<?= base_url('assets/img/web/logo.png') ?>" alt="logo" width="100">
             </a>
             <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>

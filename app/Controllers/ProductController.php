@@ -65,6 +65,12 @@ class ProductController extends BaseController
                     'numeric' => 'Stok harus diisi angka.',
                 ]
             ],
+            'link' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Link harus diisi.',
+                ]
+            ],
             'id_kategori' => [
                 'rules' => 'required',
                 'errors' => [
@@ -85,6 +91,7 @@ class ProductController extends BaseController
             'deskripsi' => $this->request->getPost('deskripsi'),
             'harga' => $this->request->getPost('harga'),
             'stok' => $this->request->getPost('stok'),
+            'link' => $this->request->getPost('link'),
             'id_kategori' => $this->request->getPost('id_kategori'),
             'gambar' => $upload->getName(),
             'created_at' => Time::now(),
@@ -140,6 +147,12 @@ class ProductController extends BaseController
                     'numeric' => 'Stok harus diisi angka.',
                 ]
             ],
+            'link' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Link harus diisi.',
+                ]
+            ],
             'id_kategori' => [
                 'rules' => 'required',
                 'errors' => [
@@ -168,6 +181,7 @@ class ProductController extends BaseController
                 'deskripsi' => $this->request->getPost('deskripsi'),
                 'harga' => $this->request->getPost('harga'),
                 'stok' => $this->request->getPost('stok'),
+                'link' => $this->request->getPost('link'),
                 'id_kategori' => $this->request->getPost('id_kategori'),
                 'gambar' => $upload->getName(),
                 'created_at' => Time::now(),

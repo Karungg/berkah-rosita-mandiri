@@ -54,6 +54,13 @@ Edit Produk
                 </div>
             </div>
             <div class="mb-3">
+                <label for="link" class="form-label">Link</label>
+                <input type="number" class="form-control <?= (isset($errors['link'])) ? 'is-invalid' : '' ?>" id="link" name="link" value="<?= old('link') ?>">
+                <div class="invalid-feedback">
+                    <?= validation_show_error('link') ?>
+                </div>
+            </div>
+            <div class="mb-3">
                 <label for="id_kategori" class="form-label">Kategori</label>
                 <select name="id_kategori" class="form-select <?= (isset($errors['id_kategori'])) ? 'is-invalid' : '' ?>">
                     <?php foreach ($categories as $category) : ?>

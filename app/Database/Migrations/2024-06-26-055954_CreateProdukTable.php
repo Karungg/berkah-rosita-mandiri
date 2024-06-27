@@ -37,6 +37,10 @@ class CreateProdukTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100'
             ],
+            'link' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ],
             'created_at' => [
                 'type' => 'datetime',
                 'null' => true

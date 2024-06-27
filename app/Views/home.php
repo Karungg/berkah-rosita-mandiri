@@ -13,66 +13,10 @@
 <div class="row g-4">
     <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
         <div class="product-item text-center border h-100 p-4">
-            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/product-1.png" alt="" />
-            <div class="mb-2">
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small>(99)</small>
-            </div>
+            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/brm-1.png" alt="" />
             <a href="" class="h6 d-inline-block mb-2">Hair Shining Shampoo</a>
             <h5 class="text-primary mb-3">$99.99</h5>
-            <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-        <div class="product-item text-center border h-100 p-4">
-            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/product-2.png" alt="" />
-            <div class="mb-2">
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small>(99)</small>
-            </div>
-            <a href="" class="h6 d-inline-block mb-2">Anti-dandruff Shampoo</a>
-            <h5 class="text-primary mb-3">$99.99</h5>
-            <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-        <div class="product-item text-center border h-100 p-4">
-            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/product-1.png" alt="" />
-            <div class="mb-2">
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small>(99)</small>
-            </div>
-            <a href="" class="h6 d-inline-block mb-2">Anti Hair Fall Shampoo</a>
-            <h5 class="text-primary mb-3">$99.99</h5>
-            <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-        <div class="product-item text-center border h-100 p-4">
-            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/product-2.png" alt="" />
-            <div class="mb-2">
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small class="fa fa-star text-primary"></small>
-                <small>(99)</small>
-            </div>
-            <a href="" class="h6 d-inline-block mb-2">Hair Growing Shampoo</a>
-            <h5 class="text-primary mb-3">$99.99</h5>
-            <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
+            <a href="" class="btn btn-outline-primary px-3">Beli Sekarang</a>
         </div>
     </div>
 </div>
