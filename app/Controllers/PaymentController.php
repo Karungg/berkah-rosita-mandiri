@@ -31,6 +31,18 @@ class PaymentController extends BaseController
         ]);
     }
 
+    public function show($id)
+    {
+        $payment = $this->db->table('pembayaran')
+            ->where('id_pembayaran', $id)
+            ->get()
+            ->getResultArray();
+
+        return view('payments/show', [
+            'payment' => $payment,
+        ]);
+    }
+
     public function store()
     {
         if (!$this->request->is('post')) {
@@ -176,7 +188,7 @@ class PaymentController extends BaseController
 
         $upload = $this->request->getFile('bukti_pembayaran');
         $uploadName = $upload->getRandomName();
-        $upload->move(WRITEPATH . '../public/assets/img/', $uploadName);
+        $upload->move(WRITEPATH . '../public/assets/img/bukti/', $uploadName);
 
         $this->db->table('pembayaran')
             ->where('id_pembayaran', $this->request->getPost('id_pembayaran'))

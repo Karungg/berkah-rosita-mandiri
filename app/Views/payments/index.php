@@ -51,6 +51,7 @@ Pembayaran
                                 <td class="text-center"><?= $payment['metode_pembayaran'] ?></td>
                                 <td class="text-center">Rp. <?= number_format($payment['total']) ?></td>
                                 <td class="text-center">
+                                    <a href="<?= base_url('admin/payments/' . $payment['id_pembayaran']) ?>" class="btn btn-primary">Detail</a>
                                     <a href="<?= base_url('admin/payments/' . $payment['id_pembayaran']) ?>/edit" class="btn btn-success">Edit</a>
                                     <form action="<?= base_url('admin/payments/delete/' . $payment['id_pembayaran']) ?>" method="post" onsubmit="return confirm('Hapus' + ' <?= $payment['nama_pembeli'] ?>?');" style="display: inline;">
                                         <?= csrf_field() ?>

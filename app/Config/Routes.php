@@ -36,6 +36,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('', 'PaymentController::index');
         $routes->get('create', 'PaymentController::create');
         $routes->post('create', 'PaymentController::store');
+        $routes->get('(:num)', 'PaymentController::show/$1');
         $routes->get('(:num)/edit', 'PaymentController::edit/$1');
         $routes->put('(:num)/edit', 'PaymentController::update');
         $routes->delete('delete/(:num)', 'PaymentController::destroy/$1');
