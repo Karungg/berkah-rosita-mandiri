@@ -55,6 +55,7 @@ Produk
                                     <img src="<?= base_url('assets/img/produk/' . $product['gambar']) ?>" alt="..." class="img-thumbnail" style="width: 100px;">
                                 </td>
                                 <td class="text-center">
+                                    <a href="<?= base_url('admin/products/' . $product['id_produk']) ?>" class="btn btn-primary">Detail</a>
                                     <a href="<?= base_url('admin/products/' . $product['id_produk']) ?>/edit" class="btn btn-success">Edit</a>
                                     <form action="<?= base_url('admin/products/delete/' . $product['id_produk']) ?>" method="post" onsubmit="return confirm('Hapus' + ' <?= $product['nama_produk'] ?>?');" style="display: inline;">
                                         <?= csrf_field() ?>

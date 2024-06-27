@@ -12,7 +12,7 @@
                 <!-- Master menu -->
                 <li class="nav-header">Master</li>
                 <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-person"></i>
-                        <p>User</p>
+                        <p>Admin</p>
                     </a> </li>
                 <li class="nav-item"> <a href="<?= base_url('admin/categories') ?>" class="nav-link <?= str_contains(uri_string(), 'categories') ? 'active' : '' ?>"> <i class="nav-icon bi bi-tag"></i>
                         <p>Kategori</p>
@@ -29,9 +29,6 @@
 
                 <!-- Report menu -->
                 <li class="nav-header">Laporan</li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-clipboard2-data"></i>
-                        <p>Laporan User</p>
-                    </a> </li>
                 <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-clipboard2-data"></i>
                         <p>Laporan Produk</p>
                     </a> </li>

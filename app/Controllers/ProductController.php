@@ -31,6 +31,19 @@ class ProductController extends BaseController
         ]);
     }
 
+    public function show($id)
+    {
+        $product = $this->db->table('produk')
+            ->join('kategori', 'kategori.id_kategori = produk.id_kategori')
+            ->where('id_produk', $id)
+            ->get()
+            ->getResultArray();
+
+        return view('products/show', [
+            'product' => $product,
+        ]);
+    }
+
     public function store()
     {
         if (!$this->request->is('post')) {

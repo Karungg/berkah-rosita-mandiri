@@ -78,7 +78,7 @@ Tambah Pembayaran
             </div>
             <div class="input-group mb-3">
                 <input type="file" class="form-control <?= (isset($errors['bukti_pembayaran'])) ? 'is-invalid' : '' ?>" id="bukti_pembayaran" name="bukti_pembayaran">
-                <label class="input-group-text" for="bukti_pembayaran">Foto Produk</label>
+                <label class="input-group-text" for="bukti_pembayaran">Bukti Pembayaran</label>
                 <div class="invalid-feedback">
                     <?= validation_show_error('bukti_pembayaran') ?>
                 </div>
