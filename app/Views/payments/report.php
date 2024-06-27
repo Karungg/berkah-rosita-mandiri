@@ -10,11 +10,26 @@ Laporan Pembayaran
 
 <?= $this->section('content'); ?>
 <div class="col-12"> <!-- Default box -->
+    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('error') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif ?>
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">
-                <a href="<?= base_url('admin/payments/create') ?>" class="btn btn-danger">Export PDF</a>
-                <a href="<?= base_url('admin/payments/create') ?>" class="btn btn-success">Export Excel</a>
+                <div class="d-flex">
+                    <?= form_open('admin/report/payments/pdf') ?>
+                    <?= csrf_field() ?>
+                    <button type="submit" class="btn btn-danger me-2">Export PDF</button>
+                    <?= form_close() ?>
+
+                    <?= form_open('admin/report/payments/excel') ?>
+                    <?= csrf_field() ?>
+                    <button type="submit" class="btn btn-success">Export Excel</button>
+                    <?= form_close() ?>
+                </div>
             </h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse"> <i data-lte-icon="expand" class="bi bi-plus-lg"></i> <i data-lte-icon="collapse" class="bi bi-dash-lg"></i> </button> <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove"> <i class="bi bi-x-lg"></i> </button>
