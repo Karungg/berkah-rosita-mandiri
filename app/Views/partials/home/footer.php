@@ -4,7 +4,7 @@
          <div class="row g-5">
              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                  <a href="index.html" class="d-inline-block mb-3">
-                     <h1 class="text-primary">Hairnic</h1>
+                     <h1 class="text-primary">Berkah Rosita Mandiri</h1>
                  </a>
                  <p class="mb-0">
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -28,11 +28,9 @@
              </div>
              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                  <h5 class="mb-4">Our Products</h5>
-                 <a class="btn btn-link" href="">Hair Shining Shampoo</a>
-                 <a class="btn btn-link" href="">Anti-dandruff Shampoo</a>
-                 <a class="btn btn-link" href="">Anti Hair Fall Shampoo</a>
-                 <a class="btn btn-link" href="">Hair Growing Shampoo</a>
-                 <a class="btn btn-link" href="">Anti smell Shampoo</a>
+                 <a class="btn btn-link" href="">BRM</a>
+                 <a class="btn btn-link" href="">Cupir</a>
+                 <a class="btn btn-link" href="">Solarium</a>
              </div>
              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                  <h5 class="mb-4">Popular Link</h5>

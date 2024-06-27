@@ -12,7 +12,14 @@
                 <div class="navbar-nav ms-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu bg-light mt-2">
+                            <?php foreach ($categories as $category) : ?>
+                                <a href="<?= base_url('categories/' . $category['nama_kategori']) ?>" class="dropdown-item"><?= $category['nama_kategori'] ?></a>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu bg-light mt-2">

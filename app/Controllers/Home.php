@@ -16,7 +16,17 @@ class Home extends BaseController
     public function index(): string
     {
         return view('home', [
-            'products' => $this->db->query('SELECT * FROM produk LIMIT 4')->getResultArray()
+            'products' => $this->db->query('SELECT * FROM produk LIMIT 4')->getResultArray(),
+            'categories' => $this->db->query('SELECT * FROM kategori')->getResultArray()
+        ]);
+    }
+
+    public function byCategory($categoryName)
+    {
+        $products = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori WHERE kategori.nama_kategori = '$categoryName'")->getResultArray();
+
+        return view('by-category', [
+            'products' => $products,
         ]);
     }
 }

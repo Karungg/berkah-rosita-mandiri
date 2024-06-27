@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+$routes->get('/categories/(:segment)', 'Home::byCategory/$1');
 $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     // Route dashboard
     $routes->get('', 'DashboardController::index');
