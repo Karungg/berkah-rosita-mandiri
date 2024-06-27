@@ -84,7 +84,7 @@ class ProductController extends BaseController
 
         $upload = $this->request->getFile('gambar');
         $uploadName = $upload->getRandomName();
-        $upload->move(WRITEPATH . '../public/assets/img/', $uploadName);
+        $upload->move(WRITEPATH . '../public/assets/img/produk/', $uploadName);
 
         $this->db->table('produk')->insert([
             'nama_produk' => $this->request->getPost('nama_produk'),
@@ -167,12 +167,12 @@ class ProductController extends BaseController
         $data = $this->db->table('produk')
             ->where('id_produk', $this->request->getPost('id_produk'))
             ->get()->getResultArray();
-        $path = '../public/assets/img/';
+        $path = '../public/assets/img/produk/';
         @unlink($path . $data[0]['gambar']);
 
         $upload = $this->request->getFile('gambar');
         $uploadName = $upload->getRandomName();
-        $upload->move(WRITEPATH . '../public/assets/img/', $uploadName);
+        $upload->move(WRITEPATH . '../public/assets/img/produk/', $uploadName);
 
         $this->db->table('produk')
             ->where('id_produk', $this->request->getPost('id_produk'))
@@ -196,7 +196,7 @@ class ProductController extends BaseController
         $data = $this->db->table('produk')
             ->where('id_produk', $id)
             ->get()->getResultArray();
-        $path = '../public/assets/img/';
+        $path = '../public/assets/img/produk/';
         @unlink($path . $data[0]['gambar']);
 
         $this->db->table('produk')

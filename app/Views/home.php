@@ -11,13 +11,15 @@
     </p>
 </div>
 <div class="row g-4">
-    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-        <div class="product-item text-center border h-100 p-4">
-            <img class="img-fluid mb-4" src="<?= base_url('template/') ?>img/brm-1.png" alt="" />
-            <a href="" class="h6 d-inline-block mb-2">Hair Shining Shampoo</a>
-            <h5 class="text-primary mb-3">$99.99</h5>
-            <a href="" class="btn btn-outline-primary px-3">Beli Sekarang</a>
+    <?php foreach ($products as $product) : ?>
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="product-item text-center border h-100 p-4">
+                <img class="img-fluid mb-4" src="<?= base_url('assets/img/produk/' . $product['gambar']) ?>" alt="" />
+                <a href="" class="h6 d-inline-block mb-2"><?= $product['nama_produk'] ?></a>
+                <h5 class="text-primary mb-3">Rp. <?= number_format($product['harga']) ?></h5>
+                <a href="<?= $product['link'] ?>" class="btn btn-outline-primary px-3">Beli Sekarang</a>
+            </div>
         </div>
-    </div>
+    <?php endforeach ?>
 </div>
 <?= $this->endSection(); ?>

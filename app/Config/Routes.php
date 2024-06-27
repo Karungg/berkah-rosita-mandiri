@@ -29,4 +29,14 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->put('(:num)/edit', 'ProductController::update');
         $routes->delete('delete/(:num)', 'ProductController::destroy/$1');
     });
+
+    // Route payments
+    $routes->group('payments', static function ($routes) {
+        $routes->get('', 'PaymentController::index');
+        $routes->get('create', 'PaymentController::create');
+        $routes->post('create', 'PaymentController::store');
+        $routes->get('(:num)/edit', 'PaymentController::edit/$1');
+        $routes->put('(:num)/edit', 'PaymentController::update');
+        $routes->delete('delete/(:num)', 'PaymentController::destroy/$1');
+    });
 });

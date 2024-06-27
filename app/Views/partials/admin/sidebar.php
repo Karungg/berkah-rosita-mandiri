@@ -23,7 +23,7 @@
 
                 <!-- Transaction menu -->
                 <li class="nav-header">Transaksi</li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-cart"></i>
+                <li class="nav-item"> <a href="<?= base_url('admin/payments') ?>" class="nav-link <?= str_contains(uri_string(), 'payments') ? 'active' : '' ?>"> <i class="nav-icon bi bi-cart"></i>
                         <p>Pembayaran</p>
                     </a> </li>
 
