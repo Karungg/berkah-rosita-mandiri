@@ -41,4 +41,18 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->put('(:num)/edit', 'PaymentController::update');
         $routes->delete('delete/(:num)', 'PaymentController::destroy/$1');
     });
+
+    // Route report products
+    $routes->group('report/products', static function ($routes) {
+        $routes->get('', 'ProductReportController::index');
+        $routes->post('pdf', 'ProductReportController::pdf');
+        $routes->post('excel', 'ProductReportController::excel');
+    });
+
+    // Route report payments
+    $routes->group('report/payments', static function ($routes) {
+        $routes->get('', 'PaymentReportController::index');
+        $routes->post('pdf', 'PaymentReportController::pdf');
+        $routes->post('excel', 'PaymentReportController::excel');
+    });
 });

@@ -29,10 +29,10 @@
 
                 <!-- Report menu -->
                 <li class="nav-header">Laporan</li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-clipboard2-data"></i>
+                <li class="nav-item"> <a href="<?= base_url('admin/report/products') ?>" class="nav-link <?= uri_string() === 'admin/report/products' ? 'active' : '' ?>"> <i class="nav-icon bi bi-clipboard2-data"></i>
                         <p>Laporan Produk</p>
                     </a> </li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-clipboard2-data"></i>
+                <li class="nav-item"> <a href="<?= base_url('admin/report/payments') ?>" class="nav-link <?= uri_string() === 'admin/report/payments' ? 'active' : '' ?>"> <i class="nav-icon bi bi-clipboard2-data"></i>
                         <p>Laporan Pembayaran</p>
                     </a> </li>
 
