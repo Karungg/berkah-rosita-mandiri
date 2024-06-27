@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Product extends Model
+class Category extends Model
 {
-    protected $table            = 'produk';
-    protected $primaryKey       = 'id_produk';
+    protected $table            = 'kategori';
+    protected $primaryKey       = 'id_kategori';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_kategori', 'nama_produk', 'deskripsi', 'harga', 'stok'];
+    protected $allowedFields    = ['nama_kategori'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

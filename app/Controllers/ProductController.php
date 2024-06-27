@@ -20,13 +20,15 @@ class ProductController extends BaseController
     public function index()
     {
         return view('products/index', [
-            'products' => $this->db->query('SELECT * FROM produk')->getResultArray()
+            'products' => $this->db->query('SELECT * FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori')->getResultArray()
         ]);
     }
 
     public function create()
     {
-        return view('products/create');
+        return view('products/create', [
+            'categories' => $this->db->query('SELECT * FROM kategori')->getResultArray()
+        ]);
     }
 
     public function store()
@@ -63,6 +65,12 @@ class ProductController extends BaseController
                     'numeric' => 'Stok harus diisi angka.',
                 ]
             ],
+            'id_kategori' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kategori harus diisi.',
+                ]
+            ],
             'gambar' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]|max_size[gambar,4096]'
         ])) {
             return redirect()->back()->withInput();
@@ -77,6 +85,7 @@ class ProductController extends BaseController
             'deskripsi' => $this->request->getPost('deskripsi'),
             'harga' => $this->request->getPost('harga'),
             'stok' => $this->request->getPost('stok'),
+            'id_kategori' => $this->request->getPost('id_kategori'),
             'gambar' => $upload->getName(),
             'created_at' => Time::now(),
             'updated_at' => Time::now()
@@ -93,7 +102,8 @@ class ProductController extends BaseController
             ->getResultArray();
 
         return view('products/edit', [
-            'product' => $product
+            'product' => $product,
+            'categories' => $this->db->query('SELECT * FROM kategori')->getResultArray(),
         ]);
     }
 
@@ -130,6 +140,12 @@ class ProductController extends BaseController
                     'numeric' => 'Stok harus diisi angka.',
                 ]
             ],
+            'id_kategori' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kategori harus diisi.',
+                ]
+            ],
             'gambar' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]|max_size[gambar,4096]'
         ])) {
             return redirect()->back()->withInput();
@@ -152,6 +168,7 @@ class ProductController extends BaseController
                 'deskripsi' => $this->request->getPost('deskripsi'),
                 'harga' => $this->request->getPost('harga'),
                 'stok' => $this->request->getPost('stok'),
+                'id_kategori' => $this->request->getPost('id_kategori'),
                 'gambar' => $upload->getName(),
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()

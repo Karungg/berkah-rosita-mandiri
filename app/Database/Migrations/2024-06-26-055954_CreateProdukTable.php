@@ -15,6 +15,10 @@ class CreateProdukTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'id_kategori' => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+            ],
             'nama_produk' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',

@@ -14,6 +14,9 @@
                 <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-person"></i>
                         <p>User</p>
                     </a> </li>
+                <li class="nav-item"> <a href="<?= base_url('admin/categories') ?>" class="nav-link <?= str_contains(uri_string(), 'categories') ? 'active' : '' ?>"> <i class="nav-icon bi bi-tag"></i>
+                        <p>Kategori</p>
+                    </a> </li>
                 <li class="nav-item"> <a href="<?= base_url('admin/products') ?>" class="nav-link <?= str_contains(uri_string(), 'products') ? 'active' : '' ?>"> <i class="nav-icon bi bi-box2"></i>
                         <p>Produk</p>
                     </a> </li>
@@ -38,9 +41,11 @@
 
                 <!-- Logout menu -->
                 <li class="nav-header">Auth</li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <li class="nav-item">
+                    <a href="<?= base_url('logout') ?>" onclick="return confirm('Logout?')" class="nav-link"> <i class="nav-icon bi bi-box-arrow-in-right"></i>
                         <p>Logout</p>
-                    </a> </li>
+                    </a>
+                </li>
             </ul> <!--end::Sidebar Menu-->
         </nav>
     </div> <!--end::Sidebar Wrapper-->

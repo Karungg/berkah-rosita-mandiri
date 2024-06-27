@@ -53,6 +53,17 @@ Edit Produk
                     <?= validation_show_error('stok') ?>
                 </div>
             </div>
+            <div class="mb-3">
+                <label for="id_kategori" class="form-label">Kategori</label>
+                <select name="id_kategori" class="form-select <?= (isset($errors['id_kategori'])) ? 'is-invalid' : '' ?>">
+                    <?php foreach ($categories as $category) : ?>
+                        <option value="<?= $category['id_kategori'] ?>"><?= $category['nama_kategori'] ?></option>
+                    <?php endforeach ?>
+                </select>
+                <div class="invalid-feedback">
+                    <?= validation_show_error('id_kategori') ?>
+                </div>
+            </div>
             <div class="input-group mb-3">
                 <input type="file" class="form-control <?= (isset($errors['gambar'])) ? 'is-invalid' : '' ?>" id="gambar" name="gambar">
                 <label class="input-group-text" for="gambar">Foto Produk</label>
