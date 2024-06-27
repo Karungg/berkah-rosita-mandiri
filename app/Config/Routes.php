@@ -11,6 +11,16 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     // Route dashboard
     $routes->get('', 'DashboardController::index');
 
+    // Route users
+    $routes->group('users', static function ($routes) {
+        $routes->get('', 'UserController::index');
+        $routes->get('create', 'UserController::create');
+        $routes->post('create', 'UserController::store');
+        $routes->get('(:num)/edit', 'UserController::edit/$1');
+        $routes->put('(:num)/edit', 'UserController::update');
+        $routes->delete('delete/(:num)', 'UserController::destroy/$1');
+    });
+
     // Route categories
     $routes->group('categories', static function ($routes) {
         $routes->get('', 'CategoryController::index');

@@ -11,7 +11,7 @@
 
                 <!-- Master menu -->
                 <li class="nav-header">Master</li>
-                <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-person"></i>
+                <li class="nav-item"> <a href="<?= base_url('user') ?>" class="nav-link"> <i class="nav-icon bi bi-person"></i>
                         <p>Admin</p>
                     </a> </li>
                 <li class="nav-item"> <a href="<?= base_url('admin/categories') ?>" class="nav-link <?= str_contains(uri_string(), 'categories') ? 'active' : '' ?>"> <i class="nav-icon bi bi-tag"></i>

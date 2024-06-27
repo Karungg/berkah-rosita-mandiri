@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     protected $db;
 
-    protected $helpers = ['form'];
+    protected $helpers = ['form', 'auth'];
 
     public function __construct()
     {
@@ -27,6 +27,7 @@ class Home extends BaseController
 
         return view('by-category', [
             'products' => $products,
+            'categories' => $this->db->query('SELECT * FROM kategori')->getResultArray()
         ]);
     }
 }
